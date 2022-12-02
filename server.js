@@ -1,4 +1,4 @@
-//import { stdout } from "./lib/dl.mjs";
+import { stdout } from "./lib/dl.mjs";
 import os from "os";
 import path from 'path';
 import express from "express";
@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.static('public'));
-
+console.log(stdout.stdout)
 
 app.get("/", (req, res) =>{
     res.sendFile(path.resolve("./"));
